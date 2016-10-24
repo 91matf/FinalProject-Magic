@@ -6,10 +6,12 @@ import java.io.IOException;
 
 public class XmlFileReaderTests {
 
-//    @Test
-//    public void testXmlFileReader_cardName() throws ParserConfigurationException, SAXException, IOException {
-//        UIController controller = new UIController();
-//        controller.setUpArray();
-//
-//    }
+
+
+    @Test
+    public void testXmlFileReader_cardName() throws ParserConfigurationException, SAXException, IOException {
+        UIController controller = new UIController();
+        controller.setUpArray();
+
+    }
 }
