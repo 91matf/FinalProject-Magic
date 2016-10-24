@@ -68,7 +68,6 @@ public class UIController {
         for(Card card: filteredByColorArrayList){
             output += card.getCardName() + "\n";
         }
-        filteredByColorArrayList = filteredCardArrayList;
         return output;
     }
 }

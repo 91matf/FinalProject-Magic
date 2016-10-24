@@ -53,6 +53,7 @@ public class UserInterface extends Application {
                 e.printStackTrace();
             }
         });
+        
         searchTermInputArea.setOnKeyPressed(new EventHandler<KeyEvent>(){
             @Override
             public void handle(KeyEvent event){
@@ -67,12 +68,14 @@ public class UserInterface extends Application {
                 }
             }
         });
+
         whiteButton.setOnAction(event -> displayFilteredByColorList());
         blueButton.setOnAction(event -> displayFilteredByColorList());
         blackButton.setOnAction(event -> displayFilteredByColorList());
         redButton.setOnAction(event -> displayFilteredByColorList());
         greenButton.setOnAction(event -> displayFilteredByColorList());
         colorlessButton.setOnAction(event -> displayFilteredByColorList());
+
         VBox base = new VBox(
                 new Label("Enter Search Term"),
                 searchTermInputArea,
