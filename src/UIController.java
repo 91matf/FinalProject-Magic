@@ -48,10 +48,18 @@ public class UIController {
 
     public void filterByColor(String color){
         for(Card card: filteredCardArrayList){
-            if(card.getCardColor().equalsIgnoreCase("colorless"))
                 if(card.getCardCost().contains(color)){
                     filteredByColorArrayList.add(card);
                 }
+        }
+    }
+
+    public void filterForColorless(){
+        for(Card card: filteredCardArrayList){
+            if(!card.getCardCost().contains("W") && !card.getCardCost().contains("U") && !card.getCardCost().contains("B")
+                    && !card.getCardCost().contains("R") && !card.getCardCost().contains("G") && !card.getCardCost().contains("C")){
+                filteredByColorArrayList.add(card);
+            }
         }
     }
 
@@ -60,6 +68,7 @@ public class UIController {
         for(Card card: filteredByColorArrayList){
             output += card.getCardName() + "\n";
         }
+        filteredByColorArrayList = filteredCardArrayList;
         return output;
     }
 }

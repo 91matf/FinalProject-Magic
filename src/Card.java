@@ -9,7 +9,6 @@ public class Card {
     private String cardType;
     private String powerToughness;
     private String cardText;
-    public boolean hasColor = true;
 
     public Card(){
     }

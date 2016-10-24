@@ -7,7 +7,7 @@ public class XmlFileReader extends DefaultHandler{
 
     public Card card = new Card();
     public String temp;
-    public final ArrayList<Card> cardList = new ArrayList<>();
+    public ArrayList<Card> cardList = new ArrayList<>();
 
     public void characters(char[] buffer, int start, int length) {
         temp = new String(buffer, start, length);

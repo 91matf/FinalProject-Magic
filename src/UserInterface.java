@@ -91,7 +91,8 @@ public class UserInterface extends Application {
             controller.filterByColor("G");
         }
         else if(colorlessButton.isSelected()){
-            controller.filterByColor("Colorless");
+            controller.filterForColorless();
+            controller.filterByColor("C");
         }
         cardListOutput.setText(controller.showColorFilteredList());
     }
