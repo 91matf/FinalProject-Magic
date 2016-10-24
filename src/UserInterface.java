@@ -1,7 +1,10 @@
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -48,6 +51,20 @@ public class UserInterface extends Application {
                 e.printStackTrace();
             } catch (SAXException e) {
                 e.printStackTrace();
+            }
+        });
+        searchTermInputArea.setOnKeyPressed(new EventHandler<KeyEvent>(){
+            @Override
+            public void handle(KeyEvent event){
+                if(event.getCode() == KeyCode.ENTER){
+                    try {
+                        displayCardsBySearchTerm();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (SAXException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         });
         whiteButton.setOnAction(event -> displayFilteredByColorList());
